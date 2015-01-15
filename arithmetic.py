@@ -1,5 +1,8 @@
-def add(num1, num2):
-    return num1 + num2
+def add(numList):
+    if len(numList) == 1:
+        return numList[0]
+    else: 
+        return (numList[0] + add(numList[1:]))
 
 def subtract(num1, num2):
     return num1 - num2
@@ -21,3 +24,4 @@ def power(num1, num2):
 
 def mod(num1, num2):
     return num1%num2
+
