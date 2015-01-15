@@ -14,23 +14,13 @@ def input_and_parameter_check():
             return tokens
 
 def use_arithmetic_functions(to_calculate):
-    """Takes in the user input (parameters), calls the function, and provides the answer."""
-    if to_calculate[0] =="+":
-        print (add(float(to_calculate[1]), float(to_calculate[2])))
-    elif to_calculate[0] =="-":
-        print (subtract(float(to_calculate[1]), float(to_calculate[2])))
-    elif to_calculate[0] =="*":
-        print (multiply(float(to_calculate[1]), float(to_calculate[2])))
-    elif to_calculate[0] =="/":
-        print (divide(float(to_calculate[1]), float(to_calculate[2])))
-    elif to_calculate[0] =="square":
-        print (square(float(to_calculate[1])))
-    elif to_calculate[0] =="cube":
-        print (cube(float(to_calculate[1])))
-    elif to_calculate[0] =="pow":
-        print (power(float(to_calculate[1]), float(to_calculate[2])))
-    elif to_calculate[0] =="mod":
-        print (mod(float(to_calculate[1]), float(to_calculate[2])))
+    """Takes in the user input (parameters), calls the function, and provides the answer."""  
+    dict_of_functions = {"+": add,"-":subtract,"*": multiply,"/":divide,"square":square,"cube":cube,"pow":power,"mod":mod}
+    if len(to_calculate) == 3:
+        print (dict_of_functions[to_calculate[0]](float(to_calculate[1]), float(to_calculate[2])))
+    elif len(to_calculate) == 2:
+        print (dict_of_functions[to_calculate[0]](float(to_calculate[1])))
+
 
 def main():
     """calls to the function for user to enter input, allows for quitting, 
