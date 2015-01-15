@@ -20,7 +20,7 @@ def use_arithmetic_functions(to_calculate):
     elif to_calculate[0] =="-":
         print (subtract(float(to_calculate[1]), float(to_calculate[2])))
     elif to_calculate[0] =="*":
-        print (multiply(float(tto_calculate[1]), float(to_calculate[2])))
+        print (multiply(float(to_calculate[1]), float(to_calculate[2])))
     elif to_calculate[0] =="/":
         print (divide(float(to_calculate[1]), float(to_calculate[2])))
     elif to_calculate[0] =="square":
@@ -44,6 +44,7 @@ def main():
                 use_arithmetic_functions(input_for_arthimetic_funct)
         except:
             print "enter a valid input"
+
 
 if __name__ == "__main__":
     main()
